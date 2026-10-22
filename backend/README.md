@@ -1,4 +1,4 @@
-﻿# ⚙️ Módulo Backend — TaskFlow (Spring Boot)
+# ⚙️ Módulo Backend — TaskFlow (Spring Boot)
 
 API RESTful desarrollada con **Java 21/23** y **Spring Boot 4**, diseñada bajo principios de arquitectura limpia y separación de responsabilidades.
 
@@ -8,10 +8,10 @@ API RESTful desarrollada con **Java 21/23** y **Spring Boot 4**, diseñada bajo 
 
 ```mermaid
 graph LR
-    Client["Cliente (React / Postman)"] -->|HTTP / JSON| Controller["Controller (@RestController)"]
-    Controller -->|DTOs| Service["Service Interface & Impl"]
-    Service -->|Entities| Repository["Repository (Spring Data JPA)"]
-    Repository -->|SQL Queries| DB[("PostgreSQL / H2")]
+    Client["Cliente (React / Postman)"] -->|"HTTP / JSON"| Controller["Controller (@RestController)"]
+    Controller -->|"DTOs"| Service["Service Interface & Impl"]
+    Service -->|"Entities"| Repository["Repository (Spring Data JPA)"]
+    Repository -->|"SQL Queries"| DB[("PostgreSQL / H2")]
     Controller -.-> ExceptionHandler["GlobalExceptionHandler (@RestControllerAdvice)"]
 ```
 

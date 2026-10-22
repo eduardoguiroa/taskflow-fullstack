@@ -1,4 +1,4 @@
-﻿# 🏛️ Documento de Arquitectura del Sistema — TaskFlow
+# 🏛️ Documento de Arquitectura del Sistema — TaskFlow
 
 Este documento describe la arquitectura global, patrones de diseño y flujo de datos de **TaskFlow**, concebido bajo principios de diseño limpio, bajo acoplamiento y alta cohesión.
 
@@ -9,26 +9,26 @@ Este documento describe la arquitectura global, patrones de diseño y flujo de d
 ```mermaid
 graph TD
     subgraph Browser ["Navegador Web del Cliente"]
-        User(["👤 Usuario"]) -->|Interacción UI / DOM| SPA["React SPA (Vite)<br>Puerto: 5173"]
+        User(["👤 Usuario"]) -->|"Interacción UI / DOM"| SPA["React SPA (Vite)<br>Puerto: 5173"]
     end
 
     subgraph BackendApp ["Servidor de Aplicaciones"]
-        SPA -->|HTTPS / JSON REST API| RestAPI["Spring Boot API REST<br>Puerto: 8080"]
-        RestAPI -->|Inyección de Dependencias| Controller["TaskController"]
-        Controller -->|DTOs inmutables| Service["TaskService & Impl"]
-        Service -->|Entidades JPA| Repo["TaskRepository (Data JPA)"]
+        SPA -->|"HTTPS / JSON REST API"| RestAPI["Spring Boot API REST<br>Puerto: 8080"]
+        RestAPI -->|"Inyección de Dependencias"| Controller["TaskController"]
+        Controller -->|"DTOs inmutables"| Service["TaskService & Impl"]
+        Service -->|"Entidades JPA"| Repo["TaskRepository (Data JPA)"]
         Controller -.-> ExceptionHandler["GlobalExceptionHandler (@RestControllerAdvice)"]
     end
 
     subgraph DataStore ["Capa de Datos"]
-        Repo -->|JDBC / SQL Nativo| Postgres[("PostgreSQL 15+<br>BD: taskflow_db<br>Puerto: 5432")]
-        Postgres -->|Trigger PL/pgSQL| Trg["trg_tasks_updated_at"]
+        Repo -->|"JDBC / SQL Nativo"| Postgres[("PostgreSQL 15+<br>BD: taskflow_db<br>Puerto: 5432")]
+        Postgres -->|"Trigger PL/pgSQL"| Trg["trg_tasks_updated_at"]
     end
 
     subgraph QualityAssurance ["Aseguramiento de Calidad (QA)"]
-        JUnit["JUnit 5 + Mockito"] -.->|Pruebas Unitarias & WebMvc| BackendApp
-        Newman["Postman / Newman CLI"] -.->|Pruebas de Contrato API| RestAPI
-        Playwright["Playwright E2E"] -.->|Automatización de Navegador| SPA
+        JUnit["🧪 JUnit 5 + Mockito"] -.->|"Unit & MockMvc Tests"| BackendApp
+        Newman["📮 Postman + Newman"] -.->|"API Contract Tests"| RestAPI
+        Playwright["🎭 Playwright E2E"] -.->|"Browser Automation"| SPA
     end
 ```
 

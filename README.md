@@ -18,16 +18,16 @@ El propósito central de este proyecto no es crear otro gestor de tareas saturad
 
 ```mermaid
 graph TD
-    User(["👤 Usuario"]) -->|Interacción en navegador| Frontend["🖥️ Frontend (React 18 + Vite)<br>Puerto: 5173"]
-    Frontend -->|HTTP / JSON (REST API)| Backend["⚙️ Backend (Spring Boot 4 / Java 23)<br>Puerto: 8080"]
-    Backend -->|Spring Data JPA / JDBC| Database[("🗄️ PostgreSQL (taskflow_db)<br>Puerto: 5432")]
+    User(["👤 Usuario"]) -->|"Interacción en navegador"| Frontend["🖥️ Frontend (React 18 + Vite)<br>Puerto: 5173"]
+    Frontend -->|"HTTP / JSON REST API"| Backend["⚙️ Backend (Spring Boot 4 / Java 23)<br>Puerto: 8080"]
+    Backend -->|"Spring Data JPA / JDBC"| Database[("🗄️ PostgreSQL (taskflow_db)<br>Puerto: 5432")]
     
-    subgraph Calidad & CI
-        JUnit["🧪 JUnit 5 + Mockito"] -.->|Unit & MockMvc Tests| Backend
-        Postman["📮 Postman + Newman"] -.->|API Contract Tests| Backend
-        Playwright["🎭 Playwright E2E"] -.->|Browser Automation| Frontend
-        CI["⚙️ GitHub Actions CI"] -->|Build & Test Pipeline| Backend
-        CI -->|Build & Test Pipeline| Frontend
+    subgraph CI_QA ["Calidad & CI"]
+        JUnit["🧪 JUnit 5 + Mockito"] -.->|"Unit & MockMvc Tests"| Backend
+        Postman["📮 Postman + Newman"] -.->|"API Contract Tests"| Backend
+        Playwright["🎭 Playwright E2E"] -.->|"Browser Automation"| Frontend
+        CI["⚙️ GitHub Actions CI"] -->|"Build & Test Pipeline"| Backend
+        CI -->|"Build & Test Pipeline"| Frontend
     end
 ```
 
