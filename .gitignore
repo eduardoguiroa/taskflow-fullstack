@@ -45,6 +45,9 @@ build/
 *.p12
 *.pem
 PROJECT_CONTEXT.md
+data/
+*.mv.db
+*.trace.db
 
 # Test & QA Artifacts
 playwright-report/
