@@ -188,25 +188,26 @@ npm test
 
 ---
 
-## 🎯 7. Cómo Presentar este Proyecto según la Vacante
+## 🎯 7. Estándares de Ingeniería y Principios de Diseño
 
-Una de las ventajas competitivas de **TaskFlow** es que puedes enfocar la entrevista técnica según el perfil al que aplicas:
+El proyecto implementa estándares profesionales de desarrollo de software aplicados a lo largo de todo el ciclo de vida:
 
-* **Para vacantes Backend (Java / Spring Boot)**:
-  - Destaca la arquitectura en capas ([`TaskController`](backend/src/main/java/com/taskflow/controller/TaskController.java) ➔ [`TaskService`](backend/src/main/java/com/taskflow/service/TaskService.java) ➔ [`TaskRepository`](backend/src/main/java/com/taskflow/repository/TaskRepository.java)).
-  - Explica el uso de Java Records para DTOs inmutables y Bean Validation declarativo.
-  - Muestra el manejo centralizado de excepciones con [`GlobalExceptionHandler`](backend/src/main/java/com/taskflow/exception/GlobalExceptionHandler.java) (`@RestControllerAdvice`).
-  - Demuestra las 13 pruebas unitarias y de integración con perfil H2.
+* **Backend & Arquitectura Limpia**:
+  - Arquitectura en capas desacoplada con inversión de dependencias ([`TaskController`](backend/src/main/java/com/taskflow/controller/TaskController.java) ➔ [`TaskService`](backend/src/main/java/com/taskflow/service/TaskService.java) ➔ [`TaskRepository`](backend/src/main/java/com/taskflow/repository/TaskRepository.java)).
+  - Modelado de dominio con DTOs inmutables mediante Java Records y validaciones declarativas con Bean Validation.
+  - Manejo centralizado y uniforme de excepciones HTTP mediante [`GlobalExceptionHandler`](backend/src/main/java/com/taskflow/exception/GlobalExceptionHandler.java) (`@RestControllerAdvice`).
+  - Suite de 13 pruebas automatizadas unitarias y de integración (`JUnit 5`, `Mockito`, `MockMvc`).
 
-* **Para vacantes Frontend / Full Stack**:
-  - Presenta la interfaz reactiva desarrollada en React con Vite.
-  - Explica la orquestación del estado, el debounce en la búsqueda textual y el consumo desacoplado en [`taskApi.js`](frontend/src/api/taskApi.js).
-  - Destaca la experiencia de usuario: modales accesibles, confirmación segura de borrado y toasts flotantes.
+* **Frontend & Experiencia de Usuario (UX)**:
+  - Interfaz reactiva modular construida con React y empaquetada con Vite para rendimiento óptimo.
+  - Gestión de estado centralizado, consumo desacoplado mediante cliente API ([`taskApi.js`](frontend/src/api/taskApi.js)) y optimización de peticiones con búsqueda reactiva debounced.
+  - Diseño responsivo con componentes accesibles, diálogos de confirmación destructiva y retroalimentación mediante notificaciones contextuales (*toasts*).
 
-* **Para vacantes QA / Testing / Automation**:
-  - Muestra el [Plan Maestro de Pruebas (`test-plan.md`)](qa/manual/test-plan.md) y la matriz de 20 casos de prueba en [test-cases.md](qa/manual/test-cases.md).
-  - Enseña los [Reportes de Defectos (`bug-reports/`)](qa/manual/bug-reports/) documentando el ciclo de vida completo de corrección (*Reported -> Fixed -> Retested -> Closed*).
-  - Ejecuta en vivo la colección de Postman/Newman y la suite E2E de Playwright.
+* **Aseguramiento de Calidad (QA) & Automatización**:
+  - Estrategia formal de pruebas con [Plan Maestro de Pruebas](qa/manual/test-plan.md) y matriz de 20 casos de prueba ([`test-cases.md`](qa/manual/test-cases.md)).
+  - Documentación de ciclo de vida completo de defectos ([`bug-reports/`](qa/manual/bug-reports/)) con análisis de causa raíz y re-test (*Reported ➔ Fixed ➔ Closed*).
+  - Pruebas automatizadas de contrato de API REST con Postman y runner Newman para integración continua.
+  - Automatización de flujos de navegación end-to-end (E2E) con Playwright.
 
 ---
 
