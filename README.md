@@ -1,6 +1,6 @@
 # 🚀 TaskFlow Full Stack
 
-[![CI Pipeline](https://github.com/usuario/taskflow-fullstack/actions/workflows/ci.yml/badge.svg)](https://github.com/usuario/taskflow-fullstack/actions)
+[![CI Pipeline](https://github.com/eduardoguiroa/taskflow-fullstack/actions/workflows/ci.yml/badge.svg)](https://github.com/eduardoguiroa/taskflow-fullstack/actions)
 [![Java 21+](https://img.shields.io/badge/Java-21%2B%20%2F%2023-orange.svg)](https://www.oracle.com/java/)
 [![Spring Boot](https://img.shields.io/badge/Spring%20Boot-4.x%20%2F%203.x-brightgreen.svg)](https://spring.io/projects/spring-boot)
 [![React](https://img.shields.io/badge/React-18%20%2F%2019-61dafb.svg)](https://react.dev/)
