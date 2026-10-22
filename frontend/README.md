@@ -1,4 +1,4 @@
-# 🖥️ Módulo Frontend — TaskFlow (React)
+﻿# 🖥️ Módulo Frontend — TaskFlow (React)
 
 Interfaz de usuario moderna y reactiva desarrollada con **React 18/19** y **Vite**, diseñada para una gestión ágil y visual de tareas.
 
@@ -22,13 +22,13 @@ graph TD
 ### Estructura del Código Fuente (`src/`)
 * **`api/taskApi.js`**: Cliente HTTP desacoplado para interactuar con la API REST de Spring Boot (`/api/tasks`).
 * **`components/`**:
-  * [`Navbar.jsx`](file:///D:/task.portafoli0/taskflow-fullstack/frontend/src/components/Navbar.jsx): Encabezado con identidad de marca y botón de acción principal.
-  * [`MetricsGrid.jsx`](file:///D:/task.portafoli0/taskflow-fullstack/frontend/src/components/MetricsGrid.jsx): Tarjetas en tiempo real de Total, Pendientes, En Progreso y Completadas.
-  * [`FilterBar.jsx`](file:///D:/task.portafoli0/taskflow-fullstack/frontend/src/components/FilterBar.jsx): Buscador textual y filtros por Estado y Prioridad con opción de reinicio.
-  * [`TaskCard.jsx`](file:///D:/task.portafoli0/taskflow-fullstack/frontend/src/components/TaskCard.jsx): Tarjeta individual con chips visuales de prioridad/estado y botón para cambiar de estado rápidamente.
-  * [`TaskModal.jsx`](file:///D:/task.portafoli0/taskflow-fullstack/frontend/src/components/TaskModal.jsx): Modal reutilizable para crear y editar tareas con validación síncrona en cliente.
-  * [`DeleteConfirmModal.jsx`](file:///D:/task.portafoli0/taskflow-fullstack/frontend/src/components/DeleteConfirmModal.jsx): Diálogo modal para confirmar la eliminación permanente de una tarea.
-  * [`EmptyState.jsx`](file:///D:/task.portafoli0/taskflow-fullstack/frontend/src/components/EmptyState.jsx): Mensaje amigable cuando la lista de tareas está vacía o los filtros no devuelven coincidencias.
+  * [`Navbar.jsx`](src/components/Navbar.jsx): Encabezado con identidad de marca y botón de acción principal.
+  * [`MetricsGrid.jsx`](src/components/MetricsGrid.jsx): Tarjetas en tiempo real de Total, Pendientes, En Progreso y Completadas.
+  * [`FilterBar.jsx`](src/components/FilterBar.jsx): Buscador textual y filtros por Estado y Prioridad con opción de reinicio.
+  * [`TaskCard.jsx`](src/components/TaskCard.jsx): Tarjeta individual con chips visuales de prioridad/estado y botón para cambiar de estado rápidamente.
+  * [`TaskModal.jsx`](src/components/TaskModal.jsx): Modal reutilizable para crear y editar tareas con validación síncrona en cliente.
+  * [`DeleteConfirmModal.jsx`](src/components/DeleteConfirmModal.jsx): Diálogo modal para confirmar la eliminación permanente de una tarea.
+  * [`EmptyState.jsx`](src/components/EmptyState.jsx): Mensaje amigable cuando la lista de tareas está vacía o los filtros no devuelven coincidencias.
 * **`styles/main.css`**: Hoja de estilos con variables CSS nativas, tema oscuro refinado (Dark Slate), animaciones fluidas y tipografía `Inter`.
 
 ---

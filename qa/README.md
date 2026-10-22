@@ -1,4 +1,4 @@
-# 🧪 Módulo de Aseguramiento de Calidad (QA) — TaskFlow
+﻿# 🧪 Módulo de Aseguramiento de Calidad (QA) — TaskFlow
 
 Este directorio contiene la estrategia integral de aseguramiento de la calidad de software implementada para **TaskFlow**, combinando **pruebas manuales exhaustivas** con **automatización de pruebas en API y End-to-End (E2E)**.
 
@@ -43,13 +43,13 @@ qa/
 
 ## 📑 3. Documentos Clave de QA Manual
 
-1. **[Plan de Pruebas (`test-plan.md`)](file:///D:/task.portafoli0/taskflow-fullstack/qa/manual/test-plan.md)**:
+1. **[Plan de Pruebas (`test-plan.md`)](manual/test-plan.md)**:
    Define los objetivos del ciclo de pruebas, alcance funcional, entornos de ejecución (navegadores y resoluciones), criterios de aceptación de entrada/salida y matriz de severidad.
 
-2. **[Matriz de Casos de Prueba (`test-cases.md`)](file:///D:/task.portafoli0/taskflow-fullstack/qa/manual/test-cases.md)**:
+2. **[Matriz de Casos de Prueba (`test-cases.md`)](manual/test-cases.md)**:
    Contiene el detalle paso a paso de cada caso de prueba, precondiciones, datos de entrada, resultado esperado, resultado obtenido y estado.
 
-3. **[Reportes de Defectos (`bug-reports/`)](file:///D:/task.portafoli0/taskflow-fullstack/qa/manual/bug-reports/)**:
+3. **[Reportes de Defectos (`bug-reports/`)](manual/bug-reports/)**:
    Formato estructurado que refleja el ciclo de vida real de los defectos reportados, con causa raíz, evidencias y resultado del re-test tras la corrección.
 
 ---
@@ -59,8 +59,8 @@ qa/
 La automatización de pruebas complementa la estrategia manual cubriendo dos niveles críticos:
 
 ### 4.1. Pruebas de API con Postman y Newman (`qa/automation/postman/`)
-* **Colección**: [`taskflow-api.postman_collection.json`](file:///D:/task.portafoli0/taskflow-fullstack/qa/automation/postman/taskflow-api.postman_collection.json)
-* **Ambiente**: [`taskflow-local.postman_environment.json`](file:///D:/task.portafoli0/taskflow-fullstack/qa/automation/postman/taskflow-local.postman_environment.json)
+* **Colección**: [`taskflow-api.postman_collection.json`](automation/postman/taskflow-api.postman_collection.json)
+* **Ambiente**: [`taskflow-local.postman_environment.json`](automation/postman/taskflow-local.postman_environment.json)
 * **Casos Automatizados**: Métricas, creación con captura de ID dinámico, consulta, actualización, filtros, validaciones 400 y ciclo de vida de eliminación (204 -> 404).
 * **Ejecución CLI**:
   ```bash
@@ -68,8 +68,8 @@ La automatización de pruebas complementa la estrategia manual cubriendo dos niv
   ```
 
 ### 4.2. Pruebas End-to-End con Playwright (`qa/automation/e2e/`)
-* **Suite de Pruebas**: [`tests/taskflow.spec.js`](file:///D:/task.portafoli0/taskflow-fullstack/qa/automation/e2e/tests/taskflow.spec.js)
-* **Configuración**: [`playwright.config.js`](file:///D:/task.portafoli0/taskflow-fullstack/qa/automation/e2e/playwright.config.js)
+* **Suite de Pruebas**: [`tests/taskflow.spec.js`](automation/e2e/tests/taskflow.spec.js)
+* **Configuración**: [`playwright.config.js`](automation/e2e/playwright.config.js)
 * **Flujos Verificados**: Carga de Dashboard, validaciones de cliente, creación de tarea, búsqueda, transición secuencial de estado, eliminación con diálogo de confirmación y feedback de estado vacío (`EmptyState`).
 * **Ejecución**:
   ```bash

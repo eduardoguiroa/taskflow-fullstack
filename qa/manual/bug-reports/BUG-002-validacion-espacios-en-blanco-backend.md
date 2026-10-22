@@ -1,4 +1,4 @@
-# 🐞 Reporte de Defecto: BUG-002
+﻿# 🐞 Reporte de Defecto: BUG-002
 
 | Identificador | Severidad | Prioridad | Estado | Versión Detectada |
 |---|---|---|---|---|
@@ -36,6 +36,6 @@ Durante las pruebas de robustez de la API REST (`POST /api/tasks`), se identific
 ## 5. Causa Raíz y Solución Aplicada
 * **Causa Raíz:** Falta de una restricción de integridad a nivel motor relacional (`CHECK constraint`) y falta de sanitización con `.trim()` explícito en el servicio.
 * **Acción Correctiva:**
-  1. En [`database/schema.sql`](file:///D:/task.portafoli0/taskflow-fullstack/database/schema.sql): Se añadió `CONSTRAINT chk_task_title_not_empty CHECK (length(trim(title)) > 0)`.
-  2. En [`backend/src/main/java/com/taskflow/service/impl/TaskServiceImpl.java`](file:///D:/task.portafoli0/taskflow-fullstack/backend/src/main/java/com/taskflow/service/impl/TaskServiceImpl.java): Se aplicó `.trim()` tanto al crear como al actualizar tareas.
+  1. En [`database/schema.sql`](../../../database/schema.sql): Se añadió `CONSTRAINT chk_task_title_not_empty CHECK (length(trim(title)) > 0)`.
+  2. En [`backend/src/main/java/com/taskflow/service/impl/TaskServiceImpl.java`](../../../backend/src/main/java/com/taskflow/service/impl/TaskServiceImpl.java): Se aplicó `.trim()` tanto al crear como al actualizar tareas.
 * **Resultado del Re-test:** Verificado con el caso **CP-003**. Entrada rechazada tanto en frontend, capa de servicio y motor PostgreSQL con código de error explicativo.

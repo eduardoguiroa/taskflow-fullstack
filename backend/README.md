@@ -1,4 +1,4 @@
-# ⚙️ Módulo Backend — TaskFlow (Spring Boot)
+﻿# ⚙️ Módulo Backend — TaskFlow (Spring Boot)
 
 API RESTful desarrollada con **Java 21/23** y **Spring Boot 4**, diseñada bajo principios de arquitectura limpia y separación de responsabilidades.
 
@@ -16,17 +16,17 @@ graph LR
 ```
 
 ### Estructura de Paquetes (`com.taskflow`)
-* **`model/`**: Entidad JPA [`Task`](file:///D:/task.portafoli0/taskflow-fullstack/backend/src/main/java/com/taskflow/model/Task.java) y enumeradores [`TaskPriority`](file:///D:/task.portafoli0/taskflow-fullstack/backend/src/main/java/com/taskflow/model/TaskPriority.java) y [`TaskStatus`](file:///D:/task.portafoli0/taskflow-fullstack/backend/src/main/java/com/taskflow/model/TaskStatus.java).
+* **`model/`**: Entidad JPA [`Task`](src/main/java/com/taskflow/model/Task.java) y enumeradores [`TaskPriority`](src/main/java/com/taskflow/model/TaskPriority.java) y [`TaskStatus`](src/main/java/com/taskflow/model/TaskStatus.java).
 * **`dto/`**: Java Records inmutables para transferencia de datos:
-  * [`TaskRequestDTO`](file:///D:/task.portafoli0/taskflow-fullstack/backend/src/main/java/com/taskflow/dto/TaskRequestDTO.java) (con validaciones `@NotBlank`, `@Size`, `@NotNull`).
-  * [`TaskResponseDTO`](file:///D:/task.portafoli0/taskflow-fullstack/backend/src/main/java/com/taskflow/dto/TaskResponseDTO.java) (con mapeador estático desde la entidad).
-  * [`TaskMetricsDTO`](file:///D:/task.portafoli0/taskflow-fullstack/backend/src/main/java/com/taskflow/dto/TaskMetricsDTO.java) (`total`, `pending`, `inProgress`, `completed`).
-  * [`ErrorResponseDTO`](file:///D:/task.portafoli0/taskflow-fullstack/backend/src/main/java/com/taskflow/dto/ErrorResponseDTO.java) (respuestas de error uniformes).
-* **`repository/`**: [`TaskRepository`](file:///D:/task.portafoli0/taskflow-fullstack/backend/src/main/java/com/taskflow/repository/TaskRepository.java) con consultas JPQL para filtrado dinámico (`searchTasks`) y conteos agregados.
-* **`service/`**: Contrato [`TaskService`](file:///D:/task.portafoli0/taskflow-fullstack/backend/src/main/java/com/taskflow/service/TaskService.java) e implementación transaccional [`TaskServiceImpl`](file:///D:/task.portafoli0/taskflow-fullstack/backend/src/main/java/com/taskflow/service/impl/TaskServiceImpl.java).
-* **`controller/`**: [`TaskController`](file:///D:/task.portafoli0/taskflow-fullstack/backend/src/main/java/com/taskflow/controller/TaskController.java) que expone los endpoints REST bajo `/api/tasks`.
-* **`exception/`**: Excepciones personalizadas ([`ResourceNotFoundException`](file:///D:/task.portafoli0/taskflow-fullstack/backend/src/main/java/com/taskflow/exception/ResourceNotFoundException.java)) y controlador global de excepciones ([`GlobalExceptionHandler`](file:///D:/task.portafoli0/taskflow-fullstack/backend/src/main/java/com/taskflow/exception/GlobalExceptionHandler.java)).
-* **`config/`**: [`CorsConfig`](file:///D:/task.portafoli0/taskflow-fullstack/backend/src/main/java/com/taskflow/config/CorsConfig.java) habilitando peticiones desde el frontend en `http://localhost:5173` y `http://localhost:3000`.
+  * [`TaskRequestDTO`](src/main/java/com/taskflow/dto/TaskRequestDTO.java) (con validaciones `@NotBlank`, `@Size`, `@NotNull`).
+  * [`TaskResponseDTO`](src/main/java/com/taskflow/dto/TaskResponseDTO.java) (con mapeador estático desde la entidad).
+  * [`TaskMetricsDTO`](src/main/java/com/taskflow/dto/TaskMetricsDTO.java) (`total`, `pending`, `inProgress`, `completed`).
+  * [`ErrorResponseDTO`](src/main/java/com/taskflow/dto/ErrorResponseDTO.java) (respuestas de error uniformes).
+* **`repository/`**: [`TaskRepository`](src/main/java/com/taskflow/repository/TaskRepository.java) con consultas JPQL para filtrado dinámico (`searchTasks`) y conteos agregados.
+* **`service/`**: Contrato [`TaskService`](src/main/java/com/taskflow/service/TaskService.java) e implementación transaccional [`TaskServiceImpl`](src/main/java/com/taskflow/service/impl/TaskServiceImpl.java).
+* **`controller/`**: [`TaskController`](src/main/java/com/taskflow/controller/TaskController.java) que expone los endpoints REST bajo `/api/tasks`.
+* **`exception/`**: Excepciones personalizadas ([`ResourceNotFoundException`](src/main/java/com/taskflow/exception/ResourceNotFoundException.java)) y controlador global de excepciones ([`GlobalExceptionHandler`](src/main/java/com/taskflow/exception/GlobalExceptionHandler.java)).
+* **`config/`**: [`CorsConfig`](src/main/java/com/taskflow/config/CorsConfig.java) habilitando peticiones desde el frontend en `http://localhost:5173` y `http://localhost:3000`.
 
 ---
 

@@ -49,7 +49,7 @@ winget install PostgreSQL.PostgreSQL.17
 ```
 
 ### Opción B: Instalador Oficial
-Descarga el instalador gráfico desde [EnterpriseDB / PostgreSQL Downloads](https://www.postgresql.org/download/windows/) para Windows x86-64 y sigue el asistente:
+Descarga el instalador gráfico desde [EnterpriseDB / PostgreSQL Downloads](https://www.postgresql.org/download/windows/) para Windows x86-64 y sigue las instrucciones de instalación:
 - **Puerto predeterminado**: `5432`
 - **Contraseña sugerida para desarrollo**: `postgres` (o la que definas en tu archivo de configuración del backend)
 

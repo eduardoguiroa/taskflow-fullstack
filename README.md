@@ -61,7 +61,6 @@ taskflow-fullstack/
 ├── docs/                       # Documentación extendida para reclutadores y diagramas C4
 │   ├── architecture/           # Diagramas de secuencia y especificación técnica
 │   └── screenshots/            # Galería de capturas de la aplicación
-├── PROJECT_CONTEXT.md          # Bitácora de persistencia y contexto técnico del monorepo
 └── README.md                   # Presentación maestra del proyecto
 ```
 
@@ -194,19 +193,19 @@ npm test
 Una de las ventajas competitivas de **TaskFlow** es que puedes enfocar la entrevista técnica según el perfil al que aplicas:
 
 * **Para vacantes Backend (Java / Spring Boot)**:
-  - Destaca la arquitectura en capas ([`TaskController`](file:///D:/task.portafoli0/taskflow-fullstack/backend/src/main/java/com/taskflow/controller/TaskController.java) ➔ [`TaskService`](file:///D:/task.portafoli0/taskflow-fullstack/backend/src/main/java/com/taskflow/service/TaskService.java) ➔ [`TaskRepository`](file:///D:/task.portafoli0/taskflow-fullstack/backend/src/main/java/com/taskflow/repository/TaskRepository.java)).
+  - Destaca la arquitectura en capas ([`TaskController`](backend/src/main/java/com/taskflow/controller/TaskController.java) ➔ [`TaskService`](backend/src/main/java/com/taskflow/service/TaskService.java) ➔ [`TaskRepository`](backend/src/main/java/com/taskflow/repository/TaskRepository.java)).
   - Explica el uso de Java Records para DTOs inmutables y Bean Validation declarativo.
-  - Muestra el manejo centralizado de excepciones con [`GlobalExceptionHandler`](file:///D:/task.portafoli0/taskflow-fullstack/backend/src/main/java/com/taskflow/exception/GlobalExceptionHandler.java) (`@RestControllerAdvice`).
+  - Muestra el manejo centralizado de excepciones con [`GlobalExceptionHandler`](backend/src/main/java/com/taskflow/exception/GlobalExceptionHandler.java) (`@RestControllerAdvice`).
   - Demuestra las 13 pruebas unitarias y de integración con perfil H2.
 
 * **Para vacantes Frontend / Full Stack**:
   - Presenta la interfaz reactiva desarrollada en React con Vite.
-  - Explica la orquestación del estado, el debounce en la búsqueda textual y el consumo desacoplado en [`taskApi.js`](file:///D:/task.portafoli0/taskflow-fullstack/frontend/src/api/taskApi.js).
+  - Explica la orquestación del estado, el debounce en la búsqueda textual y el consumo desacoplado en [`taskApi.js`](frontend/src/api/taskApi.js).
   - Destaca la experiencia de usuario: modales accesibles, confirmación segura de borrado y toasts flotantes.
 
 * **Para vacantes QA / Testing / Automation**:
-  - Muestra el [Plan Maestro de Pruebas (`test-plan.md`)](file:///D:/task.portafoli0/taskflow-fullstack/qa/manual/test-plan.md) y la matriz de 20 casos de prueba en [test-cases.md](file:///D:/task.portafoli0/taskflow-fullstack/qa/manual/test-cases.md).
-  - Enseña los [Reportes de Defectos (`bug-reports/`)](file:///D:/task.portafoli0/taskflow-fullstack/qa/manual/bug-reports/) documentando el ciclo de vida completo de corrección (*Reported -> Fixed -> Retested -> Closed*).
+  - Muestra el [Plan Maestro de Pruebas (`test-plan.md`)](qa/manual/test-plan.md) y la matriz de 20 casos de prueba en [test-cases.md](qa/manual/test-cases.md).
+  - Enseña los [Reportes de Defectos (`bug-reports/`)](qa/manual/bug-reports/) documentando el ciclo de vida completo de corrección (*Reported -> Fixed -> Retested -> Closed*).
   - Ejecuta en vivo la colección de Postman/Newman y la suite E2E de Playwright.
 
 ---

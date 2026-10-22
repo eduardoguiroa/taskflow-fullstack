@@ -44,6 +44,7 @@ build/
 .env.*.local
 *.p12
 *.pem
+PROJECT_CONTEXT.md
 
 # Test & QA Artifacts
 playwright-report/

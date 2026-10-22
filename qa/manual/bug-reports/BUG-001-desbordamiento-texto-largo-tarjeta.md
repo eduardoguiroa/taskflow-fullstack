@@ -1,4 +1,4 @@
-# 🐞 Reporte de Defecto: BUG-001
+﻿# 🐞 Reporte de Defecto: BUG-001
 
 | Identificador | Severidad | Prioridad | Estado | Versión Detectada |
 |---|---|---|---|---|
@@ -40,5 +40,5 @@ Al registrar una tarea cuyo título o descripción contiene una cadena de texto 
 
 ## 6. Causa Raíz y Solución Aplicada
 * **Causa Raíz:** Las reglas CSS por defecto no parten palabras continuas si no se define explícitamente la regla de ruptura.
-* **Acción Correctiva:** En [`frontend/src/styles/main.css`](file:///D:/task.portafoli0/taskflow-fullstack/frontend/src/styles/main.css), se agregaron las propiedades `word-break: break-word` y `overflow-wrap: anywhere` en `.task-title` y `.task-description`.
+* **Acción Correctiva:** En [`frontend/src/styles/main.css`](../../../frontend/src/styles/main.css), se agregaron las propiedades `word-break: break-word` y `overflow-wrap: anywhere` en `.task-title` y `.task-description`.
 * **Resultado del Re-test:** Verificado exitosamente en resolución móvil (375px) y de escritorio (1920px). Título ajustado al ancho de columna sin desbordamiento.

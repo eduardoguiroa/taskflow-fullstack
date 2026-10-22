@@ -1,4 +1,4 @@
-# 🏛️ Documento de Arquitectura del Sistema — TaskFlow
+﻿# 🏛️ Documento de Arquitectura del Sistema — TaskFlow
 
 Este documento describe la arquitectura global, patrones de diseño y flujo de datos de **TaskFlow**, concebido bajo principios de diseño limpio, bajo acoplamiento y alta cohesión.
 
@@ -87,7 +87,7 @@ sequenceDiagram
 * **Base de Datos**: Ejerce la última línea de defensa con restricciones `CHECK` nativas para evitar estados corruptos incluso ante inserciones SQL directas.
 
 ### 3.2. Manejo Centralizado de Excepciones
-Mediante [`GlobalExceptionHandler`](file:///D:/task.portafoli0/taskflow-fullstack/backend/src/main/java/com/taskflow/exception/GlobalExceptionHandler.java) (`@RestControllerAdvice`), el servidor nunca devuelve stacktraces de Java al cliente. Todos los errores adoptan la estructura estándar:
+Mediante [`GlobalExceptionHandler`](../../backend/src/main/java/com/taskflow/exception/GlobalExceptionHandler.java) (`@RestControllerAdvice`), el servidor nunca devuelve stacktraces de Java al cliente. Todos los errores adoptan la estructura estándar:
 ```json
 {
   "timestamp": "2026-10-22T12:00:00Z",
@@ -102,4 +102,4 @@ Mediante [`GlobalExceptionHandler`](file:///D:/task.portafoli0/taskflow-fullstac
 ```
 
 ### 3.3. Desacoplamiento de Entidades y DTOs
-Los registros Java (`Records`) [`TaskRequestDTO`](file:///D:/task.portafoli0/taskflow-fullstack/backend/src/main/java/com/taskflow/dto/TaskRequestDTO.java) y [`TaskResponseDTO`](file:///D:/task.portafoli0/taskflow-fullstack/backend/src/main/java/com/taskflow/dto/TaskResponseDTO.java) garantizan inmutabilidad y previenen vulnerabilidades como *Over-Posting* o exposición innecesaria del modelo de persistencia.
+Los registros Java (`Records`) [`TaskRequestDTO`](../../backend/src/main/java/com/taskflow/dto/TaskRequestDTO.java) y [`TaskResponseDTO`](../../backend/src/main/java/com/taskflow/dto/TaskResponseDTO.java) garantizan inmutabilidad y previenen vulnerabilidades como *Over-Posting* o exposición innecesaria del modelo de persistencia.
