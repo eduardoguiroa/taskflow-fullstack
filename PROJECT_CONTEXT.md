@@ -37,8 +37,8 @@ flowchart TD
 * **Fase 02 (Base de Datos):** ✅ **COMPLETADA**
 * **Fase 03 (Backend Spring Boot):** ✅ **COMPLETADA**
 * **Fase 04 (Frontend React):** ✅ **COMPLETADA**
-* **Fase 05 (QA Manual):** ⏳ **PENDIENTE (Punto de reanudación)**
-* **Fase 06 (QA Automatizado):** ⏹️ **PENDIENTE**
+* **Fase 05 (QA Manual):** ✅ **COMPLETADA**
+* **Fase 06 (QA Automatizado):** ⏳ **PENDIENTE (Punto de reanudación)**
 * **Fase 07 (Documentación, CI & Publicación):** ⏹️ **PENDIENTE**
 
 ---

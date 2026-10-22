@@ -66,7 +66,7 @@ taskflow-fullstack/
 - [x] **Fase 02**: Diseñar y preparar la base de datos PostgreSQL (`database/`).
 - [x] **Fase 03**: Construir la API REST con Spring Boot (`backend/`).
 - [x] **Fase 04**: Construir la interfaz de usuario con React (`frontend/`).
-- [ ] **Fase 05**: Ejecución y documentación de QA manual (`qa/manual/`).
+- [x] **Fase 05**: Ejecución y documentación de QA manual (`qa/manual/`).
 - [ ] **Fase 06**: Automatización de pruebas backend, API y E2E (`qa/automation/`).
 - [ ] **Fase 07**: Documentación final, capturas y pipeline de GitHub Actions (`.github/workflows/`).
 
