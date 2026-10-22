@@ -54,8 +54,24 @@ qa/
 
 ---
 
-## 🤖 4. Próximo Paso: Automatización de Pruebas (`qa/automation/`)
+## 🤖 4. Automatización de Pruebas (`qa/automation/`)
 
-La **Fase 06** extenderá este módulo incorporando:
-1. **API Testing**: Colección exportada de Postman con assertions para validar endpoints, códigos HTTP y payloads JSON ejecutada headless con **Newman**.
-2. **E2E Testing**: Suite de pruebas con **Playwright** para simular la navegación real del usuario.
+La automatización de pruebas complementa la estrategia manual cubriendo dos niveles críticos:
+
+### 4.1. Pruebas de API con Postman y Newman (`qa/automation/postman/`)
+* **Colección**: [`taskflow-api.postman_collection.json`](file:///D:/task.portafoli0/taskflow-fullstack/qa/automation/postman/taskflow-api.postman_collection.json)
+* **Ambiente**: [`taskflow-local.postman_environment.json`](file:///D:/task.portafoli0/taskflow-fullstack/qa/automation/postman/taskflow-local.postman_environment.json)
+* **Casos Automatizados**: Métricas, creación con captura de ID dinámico, consulta, actualización, filtros, validaciones 400 y ciclo de vida de eliminación (204 -> 404).
+* **Ejecución CLI**:
+  ```bash
+  npx newman run qa/automation/postman/taskflow-api.postman_collection.json -e qa/automation/postman/taskflow-local.postman_environment.json
+  ```
+
+### 4.2. Pruebas End-to-End con Playwright (`qa/automation/e2e/`)
+* **Suite de Pruebas**: [`tests/taskflow.spec.js`](file:///D:/task.portafoli0/taskflow-fullstack/qa/automation/e2e/tests/taskflow.spec.js)
+* **Configuración**: [`playwright.config.js`](file:///D:/task.portafoli0/taskflow-fullstack/qa/automation/e2e/playwright.config.js)
+* **Flujos Verificados**: Carga de Dashboard, validaciones de cliente, creación de tarea, búsqueda, transición secuencial de estado, eliminación con diálogo de confirmación y feedback de estado vacío (`EmptyState`).
+* **Ejecución**:
+  ```bash
+  cd qa/automation/e2e && npm test
+  ```
